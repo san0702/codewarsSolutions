@@ -21,4 +21,13 @@ public class VowelCount {
         }
         return vowelsCount;
     }
+
+    public static int getCount2(String str) {
+        return str.replaceAll("(?i)[^aeiou]", "").length();
+    }
+
+    public static int getCount3(String str) {
+        return (int) str.chars().filter(c -> "aeiou".indexOf(c) >= 0).count();
+    }
+
 }

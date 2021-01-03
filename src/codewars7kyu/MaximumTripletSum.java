@@ -1,6 +1,7 @@
 package codewars7kyu;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * Given an array/list [] of n integers ,
@@ -26,9 +27,16 @@ public class MaximumTripletSum {
                 erg += iAry[i];
                 count--;
             }
-
         }
-
         return erg;
+    }
+    public static int maxTriSum2(int[] numbers) {
+        return Arrays.stream(numbers)
+                .boxed()
+                .sorted(Collections.reverseOrder())
+                .distinct()
+                .limit(3)
+                .mapToInt(i -> i)
+                .sum();
     }
 }

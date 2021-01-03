@@ -35,4 +35,10 @@ public class NumberOfPeopleInTheBus {
         }
         return count;
     }
+
+    public static int countPassengers3(ArrayList<int[]> stops) {
+        int res = 0;
+        for (int[] onOff : stops) res += onOff[0] - onOff[1];
+        return res;
+    }
 }

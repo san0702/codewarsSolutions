@@ -1,3 +1,3 @@
 # codewarsSolutions
 
-My Solutions from codewars
+My solutions from codewars

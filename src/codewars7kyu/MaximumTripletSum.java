@@ -9,6 +9,7 @@ import java.util.Collections;
  * maxTriSum ({3,2,6,8,2,3}) ==> return (17)
  * As the triplet that maximize the sum {6,8,3} in order, their sum is (17)
  * Note : duplications are not included when summing, (i.e) the numbers added only once.
+ * https://www.codewars.com/kata/5aa1bcda373c2eb596000112
  */
 
 public class MaximumTripletSum {

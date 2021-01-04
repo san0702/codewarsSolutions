@@ -17,6 +17,7 @@ public class NumberOfPeopleInTheBus {
      * Take a look on the test cases.
      * Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.
      * The second value in the first integer array is 0, since the bus is empty in the first bus stop.
+     * https://www.codewars.com/kata/5648b12ce68d9daa6b000099
      */
 
     public static int countPassengers(ArrayList<int[]> stops) {

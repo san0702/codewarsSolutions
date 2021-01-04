@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
  * <p>
  * minValue ({1, 3, 1})  ==> return (13)
  * (13) is the minimum number could be formed from {1, 3, 1} , Without duplications
+ * https://www.codewars.com/kata/5ac6932b2f317b96980000ca
  */
 public class FormTheMinimum {
     public static int minValue(int[] values) {

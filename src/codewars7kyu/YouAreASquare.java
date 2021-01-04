@@ -26,9 +26,25 @@ package codewars7kyu;
  *  4  =>  true
  * 25  =>  true
  * 26  =>  false
+ * https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/java
  */
 public class YouAreASquare {
     public static boolean isSquare(int n) {
-        return true; // fix me!
+        if(n < 0){
+            return false;
+        }
+        double m = Math.sqrt(n);
+        if(m*m == n) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean isSquare2(int n) {
+      /* if(n < 0){
+           return false;
+       }*/
+        double m = Math.sqrt(n);
+        return m * m == n;
     }
 }

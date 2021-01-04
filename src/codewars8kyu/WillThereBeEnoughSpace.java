@@ -17,6 +17,7 @@ package codewars8kyu;
  * 0 -- He can fit all 5 passengers
  * enough(100, 60, 50)
  * 10 -- He can't fit 10 of the 50 waiting
+ * https://www.codewars.com/kata/5875b200d520904a04000003
  */
 public class WillThereBeEnoughSpace {
 

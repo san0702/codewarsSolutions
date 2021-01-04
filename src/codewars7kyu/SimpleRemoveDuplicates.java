@@ -1,7 +1,8 @@
 package codewars7kyu;
 
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * // Remove the 3's at indices 0 and 3
@@ -11,20 +12,55 @@ import java.util.Iterator;
 
 public class SimpleRemoveDuplicates {
 
+    public static int[] solve2(int[] arr) {
+        var list = new java.util.ArrayList<Integer>();
+        for (int a : arr) {
+            list.removeIf(elem -> elem == a);
+            list.add(a);
+        }
+        return list.stream().mapToInt(elem -> elem).toArray();
+    }
+
+    public static int[] solve3(int[] arr) {
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            map.put(arr[i], i);
+        }
+
+        return map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue())
+                .mapToInt(e -> e.getKey())
+                .toArray();
+
+    }
+
     public static int[] solve(int[] arr) {
-        HashSet<Integer> set = new HashSet<>();
-        final int len = arr.length;
+        int[] erg;
 
-        for (int i = 0; i < len; i++) {
-            set.add(arr[i]);
-        }
+        helperlein(arr);
+        erg = Arrays.stream(arr).distinct().toArray();
 
-        int[] whitelist = new int[set.size()];
-        int i = 0;
-        for (Iterator<Integer> it = set.iterator(); it.hasNext(); ) {
-            whitelist[i++] = it.next();
+        helperlein(erg);
+        return erg;
+    }
+
+    //for method solve()
+
+    /**
+     * reverses an array
+     * @param arr
+     * @return reversed array
+     */
+    public static int[] helperlein(int[] arr) {
+
+        for (int left = 0, right = arr.length - 1; left < right; left++, right--) {
+
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
         }
-        return whitelist;
+        return arr;
     }
 
 }

@@ -45,12 +45,13 @@ public class SimpleRemoveDuplicates {
         return erg;
     }
 
-    //for method solve()
+
 
     /**
      * reverses an array
      * @param arr
      * @return reversed array
+     * for method solve()
      */
     public static int[] helperlein(int[] arr) {
 

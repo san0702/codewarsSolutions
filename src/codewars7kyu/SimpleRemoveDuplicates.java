@@ -51,10 +51,8 @@ public class SimpleRemoveDuplicates {
     /**
      * reverses an array
      * @param arr
-     * @return reversed array
-     * for method solve()
      */
-    public static int[] helperlein(int[] arr) {
+    public static void helperlein(int[] arr) {
 
         for (int left = 0, right = arr.length - 1; left < right; left++, right--) {
 
@@ -62,7 +60,6 @@ public class SimpleRemoveDuplicates {
             arr[left] = arr[right];
             arr[right] = temp;
         }
-        return arr;
     }
 
 }

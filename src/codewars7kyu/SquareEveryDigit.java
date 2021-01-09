@@ -1,6 +1,5 @@
 package codewars7kyu;
 
-import java.util.Arrays;
 import java.util.stream.Collectors;
 
 /**

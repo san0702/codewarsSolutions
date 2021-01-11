@@ -1,5 +1,8 @@
 package codewars8kyu;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * Write a function to convert a name into initials.
  * This kata strictly takes two words with one space in between them.
@@ -37,4 +40,12 @@ public class AbbreviateATwoWordName {
         name = name.toUpperCase();
         return name.charAt(0) + "." + name.charAt(name.indexOf(" ") + 1);
     }
+
+    public static String abbrevName6(String name) {
+        return Arrays.stream(name.split(" "))
+                .map(String::toUpperCase)
+                .map(word -> word.substring(0, 1))
+                .collect(Collectors.joining("."));
+    }
+
 }

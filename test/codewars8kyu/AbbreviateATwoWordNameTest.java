@@ -49,4 +49,13 @@ public class AbbreviateATwoWordNameTest {
         assertEquals("P.F", AbbreviateATwoWordName.abbrevName5("P Favuzzi"));
         assertEquals("D.M", AbbreviateATwoWordName.abbrevName5("David Mendieta"));
     }
+
+    @Test
+    public void testFixed6() {
+        assertEquals("S.H", AbbreviateATwoWordName.abbrevName6("Sam Harris"));
+        assertEquals("P.F", AbbreviateATwoWordName.abbrevName6("Patrick Feenan"));
+        assertEquals("E.C", AbbreviateATwoWordName.abbrevName6("Evan Cole"));
+        assertEquals("P.F", AbbreviateATwoWordName.abbrevName6("P Favuzzi"));
+        assertEquals("D.M", AbbreviateATwoWordName.abbrevName6("David Mendieta"));
+    }
 }

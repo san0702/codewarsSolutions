@@ -14,7 +14,7 @@ import java.util.Collections;
 
 public class MaximumTripletSum {
 
-    public static int maxTriSum(int[] numbers) {
+    public static int maxTriSum2(int[] numbers) {
         int[] iAry = Arrays.stream(numbers)
                 .distinct()
                 .sorted()
@@ -31,7 +31,7 @@ public class MaximumTripletSum {
         }
         return erg;
     }
-    public static int maxTriSum2(int[] numbers) {
+    public static int maxTriSum(int[] numbers) {
         return Arrays.stream(numbers)
                 .boxed()
                 .sorted(Collections.reverseOrder())

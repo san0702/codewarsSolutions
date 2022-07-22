@@ -11,6 +11,7 @@ public class MaximumTripletSumTest {
         assertEquals(17, MaximumTripletSum.maxTriSum(new int[]{3,2,6,8,2,3}));
         assertEquals(32, MaximumTripletSum.maxTriSum(new int[]{2,9,13,10,5,2,9,5}));
         assertEquals(18, MaximumTripletSum.maxTriSum(new int[]{2,1,8,0,6,4,8,6,2,4}));
+        assertEquals(21, MaximumTripletSum.maxTriSum(new int[]{5,10,10,10,6}));
     }
     @Test
     public void Check_Negative_Values()

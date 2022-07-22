@@ -11,10 +11,6 @@ import java.util.stream.IntStream;
  */
 public class SmallestUnusedID {
 
-    public static void main(String[] args) {
-        int [] temp = {1,3,5,2};
-        System.out.println(nextId(temp));
-    }
     public static int nextId(int[] ids) {
     int [] temp = Arrays.stream(ids)
             .sorted()
